@@ -110,7 +110,7 @@ func TestBasicTypes(t *testing.T) {
 }
 
 func TestBasicTypesWithRelSVCOutFlag(t *testing.T) {
-	svcOut := "./metaverse"
+	svcOut := "./techxmind"
 	path := filepath.Join(basePath, "1-basic")
 	err := createTrussService(path, "--svcout", svcOut)
 	if err != nil {
@@ -123,7 +123,7 @@ func TestBasicTypesWithRelSVCOutFlag(t *testing.T) {
 }
 
 func TestBasicTypesWithTrailingSlashSVCOutFlag(t *testing.T) {
-	svcOut := "./metaverse/"
+	svcOut := "./techxmind/"
 	path := filepath.Join(basePath, "1-basic")
 	err := createTrussService(path, "--svcout", svcOut)
 	if err != nil {
@@ -390,7 +390,7 @@ func cleanTests(servicesDir string) {
 // service from a single definition directory
 func removeTestFiles(defDir string) {
 	// svcout dir
-	os.RemoveAll(filepath.Join(defDir, "metaverse"))
+	os.RemoveAll(filepath.Join(defDir, "techxmind"))
 	// service dir
 	os.RemoveAll(filepath.Join(defDir, "test-service"))
 	// where the binaries are compiled to
